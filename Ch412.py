@@ -9,6 +9,8 @@ for service in services:
 service1 = input("\nSelect first service:\n")
 service2 = input("Select second service:\n")
 
+print("\nDavy's auto shop invoice\n")
+
 #Zach's Part
 
 #Checking inputs and printing invoice
