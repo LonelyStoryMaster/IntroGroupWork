@@ -3,3 +3,11 @@ auto_services = {"Oil change": 35, "Tire rotation": 19, "Car wash": 7, "Car wax"
 print("Davy's auto shop services")
 for service in auto_services:
     print("%s -- $%d" % (service, auto_services[service]))
+
+#TODO Gather service inputs
+
+
+#TODO Check if inputs are no service
+
+
+#TODO Print invoice
