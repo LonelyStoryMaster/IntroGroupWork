@@ -4,6 +4,7 @@ import random
 num_rolls = int(input('Enter number of rolls:\n'))
 total_nums = {2:0, 3:0, 4:0, 5:0, 6:0, 7:0, 8:0, 9:0, 10:0, 11:0, 12:0}
 roll_total=0
+
 while num_rolls >= 1:
     for i in range(num_rolls):
         die1 = random.randint(1,6)
