@@ -1,5 +1,3 @@
-# Type your code here
-
 usr_string = input('Enter input string:\n')
 
 while ',' not in usr_string:
