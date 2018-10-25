@@ -22,15 +22,16 @@ def data_point():
             if data.count(',') > 1:
                 print('Error: Too many commas in input.\n')
             else:
+                nums = []
                 for i in range(1000):
-                    if points[1].strip() != str(i):
-                        shit = True
-                        break
-                    else:
-                        print('Error: Comma not followed by an integer.\n')
+                    nums.append(str(i))
+                if points[1].strip() in nums:
+                    shit = True
+                else:
+                    print('Error: Comma not followed by an integer.\n')
         if shit:
             print('Data string: {}'.format(points[0]))
-            print('Data integer:{}'.format(points[1]))
+            print('Data integer:{}\n'.format(points[1]))
         data = input('Enter a data point (-1 to stop input):\n')
 
 if __name__ == '__main__':
@@ -44,4 +45,5 @@ if __name__ == '__main__':
     print('You entered: %s' % col2)
     print()
     data_point()
+    print()
     
