@@ -1,3 +1,7 @@
+column1 = []
+column2 = []
+
+
 def get_title():
     title = input('Enter a title for the data:\n')
     return title
@@ -11,6 +15,7 @@ def get_col2():
     return col2
 
 def data_point():
+    global column1, column2
     data = input('Enter a data point (-1 to stop input):\n')
     while data != '-1':
         shit = False
@@ -32,7 +37,20 @@ def data_point():
         if shit:
             print('Data string: {}'.format(points[0]))
             print('Data integer:{}\n'.format(points[1]))
+            column1.append(points[0])
+            column2.append(points[1])
         data = input('Enter a data point (-1 to stop input):\n')
+
+def table(title, col1, col2):
+    print('%33s' % title)
+    print('%-20s|%23s' % (col1, col2))
+    print('-' * 44)
+    for x in range(len(column1)):
+        print('%-20s|%23s' % (column1[x], column2[x]))
+
+def histo():
+    for x in range(len(column1)):
+        print('%20s %s' % (column1[x], int(column2[x]) * '*'))
 
 if __name__ == '__main__':
     title = get_title()
@@ -46,4 +64,6 @@ if __name__ == '__main__':
     print()
     data_point()
     print()
-    
+    table(title, col1, col2)
+    print()
+    histo()
