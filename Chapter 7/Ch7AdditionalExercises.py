@@ -4,8 +4,9 @@ def name():
     return fullName
 
 def split(name):
-    part = name.split(' ')
+    part = name.split()
     return part
+
 def initials(nList):
     first = nList[0]
     mid = nList[1]
@@ -73,10 +74,8 @@ def pigLatin():
     words = phrase.split()
     newPhrase = words
     for x in words:
-        y = len(x)
-        y = y + 3
         new_Word = x + x[0] + 'ay'
-        newPhrase[z] = new_Word[1:y]
+        newPhrase[z] = new_Word[1:len(phrase)]
         z += 1
     print(' '.join(newPhrase))
 
