@@ -108,4 +108,6 @@ if __name__ == '__main__':
     usrString = input('Enter a word or phrase:')
     vowel(usrString, vowels)
     consonant(usrString, consonants)
+
+    #Problem
     pigLatin()
