@@ -72,8 +72,26 @@ def decrypt(codes):
     return decrypted_str
 
 #Problem 4
+def sort_dict(dict_to_sort, reverse=False):
+    new_dict = {}
+    tup_list = sorted(dict_to_sort.items())
+    # So we can sort high-to-low and not low-to-high if we want to 
+    if reverse:
+        tup_list.reverse()
+    for tup in tup_list:
+	    new_dict[tup[0]] = tup[1]
+    return new_dict   
+
 def show_off_dict(totally_not_a_dict):
-    pass
+    print("\nThis is a non-formatted dictionary:\n%s" % totally_not_a_dict)
+    print("\nThis is all the keys from the dictionary:\n%s" % totally_not_a_dict.keys())
+    print("\nThis is all the values from the dictionary:\n%s" % totally_not_a_dict.values())
+    totally_not_a_dict['sandwich'] = 'food'
+    print("\nLet's add a new element called 'sandwich' with the value 'food':\n%s" % totally_not_a_dict)
+    totally_not_a_dict.pop('3')
+    print("\nLet's remove the key '3' now:\n%s" % totally_not_a_dict)
+    totally_not_a_dict.clear()
+    print("Let's wipe the slate clean and restart the dictionary now:\n%s" % totally_not_a_dict)
 
 if __name__ == '__main__':
     # rainfall()
@@ -88,5 +106,7 @@ if __name__ == '__main__':
              '{': '₧', '}': '╓'}
     # encrypt(codes)
     # encrypt(codes)
-    list_to_show = [1, 423, 234235, 123, 23, 632, 123, 0.2, 32]
-    show_off_list()
+    # list_to_show = [1, 423, 234235, 123, 23, 632, 123, 0.2, 32]
+    # show_off_list()
+    dict_to_show = {'apple': 'fruit', 'red': 'color', '3': 'number'}
+    show_off_dict(dict_to_show)
