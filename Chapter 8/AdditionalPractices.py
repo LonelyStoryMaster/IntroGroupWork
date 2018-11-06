@@ -72,16 +72,6 @@ def decrypt(codes):
     return decrypted_str
 
 #Problem 4
-def sort_dict(dict_to_sort, reverse=False):
-    new_dict = {}
-    tup_list = sorted(dict_to_sort.items())
-    # So we can sort high-to-low and not low-to-high if we want to 
-    if reverse:
-        tup_list.reverse()
-    for tup in tup_list:
-	    new_dict[tup[0]] = tup[1]
-    return new_dict   
-
 def show_off_dict(totally_not_a_dict):
     print("\nThis is a non-formatted dictionary:\n%s" % totally_not_a_dict)
     print("\nThis is all the keys from the dictionary:\n%s" % totally_not_a_dict.keys())
