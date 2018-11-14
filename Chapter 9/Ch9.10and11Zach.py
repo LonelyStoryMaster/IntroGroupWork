@@ -43,10 +43,6 @@ class ShoppingCart:
 
     def cost_of_cart(self):
         
-    
-        
-        
-
 if __name__ == "__main__":
 
     item_cart = ShoppingCart(name, date)
